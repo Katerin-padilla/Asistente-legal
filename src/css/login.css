@@ -1,0 +1,139 @@
+/* Este es para el contenedor principal */
+.login-container {
+  width: 400px;
+  padding: 30px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación para el contenedor */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para el título */
+.login-container h2 {
+  color: #464646;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+  animation: glowText 2s infinite;
+}
+
+/* Animación para el texto */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Estilos para los campos de entrada */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  color: #353535;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+/* Efecto en foco de los inputs */
+.login-container input:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para las etiquetas de los campos flotantes */
+.login-container label {
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación de las etiquetas al llenar o enfocar el input */
+.login-container input:focus ~ label,
+.login-container input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: rgba(27, 27, 27, 0.8);
+}
+
+/* Estilos para el botón */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8c52ff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 320px !important;
+  height: auto !important;
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(140, 82, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(140, 82, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(140, 82, 255, 0);
+  }
+}
+
+/* Estilo del mensaje de error */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Fondo del cuerpo con gradiente */
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #aaaaaa, #678aeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
